@@ -1,0 +1,140 @@
+:root {
+    --vermelho: #fa0000;
+    --primeira-cor: #3498db;
+    --segunda-cor: #2ecc71;
+    --fundo-cor: #ecf0f1;
+    --texto-cor: #34495e;
+    --fundo-cartao: #ffffff;
+    --hover-botao: #2980b9;
+    --sombra-cor: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--fundo-cor);
+    color: var(--texto-cor);
+}
+h1 {
+    text-align: center;
+    color: var(--primeira-cor);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+span {
+    color: var(--vermelho);
+    font-weight: bold;
+
+}
+.form-busca {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form-busca .input-produto {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid var(--primeira-cor);
+    border-radius: 25px;
+    outline: none;
+}
+
+.form-busca .input-produto:focus {
+    box-shadow: 0 0 5px var(--primeira-cor);
+}
+
+.form-busca button {
+    padding: 12px 25px;
+    background-color: var(--primeira-cor);
+    border-radius: 25px;
+    color: var(--fundo-cartao);
+    font-size: 16px;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.form-busca button:hover {
+    background-color: var(--hover-botao);
+}
+
+.lista-produtos {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-bottom: 30px;
+}
+
+.cartao-produto {
+    background-color: var(--fundo-cartao);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--sombra-cor);
+    text-align: center;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.cartao-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 5px var(--primeira-cor);
+    cursor: pointer;
+}
+
+.cartao-produto h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--hover-botao);
+}
+
+.cartao-produto p {
+    color: var(--texto-cor);
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.cartao-produto img {
+    width: 100px;
+    height: 100px;
+}
+
+.cartao-produto .p {
+    color: var(--segunda-cor);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cartao-produto .estoque {
+    color: var(--texto-cor)
+}
+
+.cartao-produto .link-comprar {
+   text-decoration: none; 
+   color: var(--fundo-cartao);
+   background-color: var(--segunda-cor);
+   border-radius: 5px;
+   padding: 5px;
+   margin: 15px;
+}
+
+.cartao-produto .link-comprar:hover {
+    background-color: var(--primeira-cor);
+}
+.grafico-precos.ativo {
+    background-color: var(--fundo-cartao);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--sombra-cor);
+    text-align: center;
+    padding: 10px;
+    transition: 0.5s;
+    margin: 0 20px 20px;
+}
